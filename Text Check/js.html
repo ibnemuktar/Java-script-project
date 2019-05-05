@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Project</title>
+</head>
+<body>
+	
+	<input type="text" id="codeText" />
+				<button onclick="checkCoding()">check</button>
+			
+			
+				<div id="show"></div>
+				
+				
+	
+	<script type="text/javascript"> 
+				function checkCoding(){
+					   var txt;
+					   var coding=document.getElementById("codeText").value;
+					   
+					switch(coding) {
+					   case "java":
+					   txt= "I love java";
+					   break;
+						case"php":
+					   txt="i love php";
+					   break;
+						case"c#":
+					   txt="i love c#";
+					   break;
+					   default:
+					   txt="unknow....";
+					
+					}
+					document.getElementById("show").innerHTML=txt;
+					}
+	</script>
+	
+</body>
+</html>

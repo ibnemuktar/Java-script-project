@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Project</title>
+</head>
+<body>
+	
+	<table>
+		 <tr>
+			<td>Your input</td>
+			<td><input type="text" id="getValue"/></td>
+		 </tr>
+		 <tr>
+			<td></td>
+			<td><input type="button" id="check" onclick="getNumber()"/></td>
+		 </tr>
+		  <tr>
+			<td>Your Result</td>
+			<textarea name="" id="showValue" cols="30" rows="10"></textarea>
+		 </tr>
+		</table>
+	
+	<script type="text/javascript"> 
+				function getNumber(){
+						document.getElementById("showValue").value="";
+						var getString=document.getElementById("getValue").value;
+						var result = getString.match(/\d+/g);
+						for (var i=0;i<result.length;i++){
+						document.getElementById("showValue").value+=result[i]+"\n";
+						}
+				}
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Project</title>
+</head>
+<body>
+	 	<input type="button" value="Test Timeout" onclick="timeInit()"/>
+	   <input type="button" value="Clear Timeout" onclick="timeoutClear()"/>
+	  	<div id="show">
+		</div>  
+	   
+	   
+	<script type="text/javascript"> 
+		var timeout;
+		function timeoutTrigger(){
+			document.getElementById("show").innerHTML="the timeout has been Triggered....after 3 sec....";
+		}
+		function timeInit(){
+			timeout=setTimeout("timeoutTrigger()", 3000);
+			document.getElementById("show").innerHTML="the timeout has been started....";
+		}
+		function timeoutClear(){
+		 clearTimeout(timeout)
+		 document.getElementById("show").innerHTML="the timeout has been cleared";
+		} 
+	</script>   
+	   
+</body>
+</html>

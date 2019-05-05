@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Javasript Project</title>
+</head>
+<body>
+	   
+	    <input type="button" value="Start Timeout" onclick="countdownInit()"/>
+	   <input type="button" value="Stop Timeout" onclick="countdownClear()"/>
+	  	<div id="show">
+		</div>
+	   
+	   
+	 <script type="text/javascript"> 
+		
+	  var countdown;
+		var countdownNumber;
+		function countdownInit(){
+			countdownNumber=10;
+			countdownTrigger();
+		}
+		function countdownTrigger(){
+		if(countdownNumber>0){
+			countdownNumber--;
+			document.getElementById("show").innerHTML=countdownNumber;
+			if(countdownNumber > 0){
+				countdown=setTimeout("countdownTrigger()",1000);
+			}
+		}
+		
+		}
+		
+		function countdownClear(){
+			clearTimeout(countdown)
+		}
+	
+	 </script>
+	   
+</body>
+</html>

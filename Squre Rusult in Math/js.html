@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Java script project</title>
+</head>
+<body>
+
+	<form action="" name="myform">
+			<table>
+				<tr>
+					<td><input type="text"  name="t1" onchange="docCal(this.form,this.name)" /></td>
+				</tr>
+	          	<tr>
+					<td><input type="checkbox"  name="chbox" onclick="docCal(this.form,this.name)" /></td>
+				</tr>
+				<tr>
+					<td><input type="text"  name="result" onchange="docCal(this.form,this.name)" /></td>
+				</tr>
+				<tr>
+					<td><input type="reset"  name="Refresh" /></td>
+				</tr>
+			</table>
+		</form>   
+		
+	<script type="text/javascript"> 
+	
+		function docCal(form,pfield){
+			if(pfield=="result"){
+			if(form.chbox.checked){
+				form.t1.value=math.sqrt(form.result.value);
+			}else{
+				form.t1.value=form.result.value/2;
+				}
+			}else{
+				if(form.chbox.checked){
+				form.result.value=form.t1.value*form.t1.value;
+				}else{
+					form.result.value=form.t1.value*2;
+				
+			}
+		  }
+		}
+		
+	</script>
+</body>
+</html>

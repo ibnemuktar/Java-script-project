@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript fade in & out</title>
+</head>
+<body>
+	 <button>Start</button>
+	 <img src="nature1.jpg" alt="" id="Njpg" />
+	 
+	 <script type="text/javascript"> 
+		var element=document.getElementById("Njpg");
+		
+		var duration=3000;
+		var hidtime=1000;
+		var showtime=2000;
+		function setOpacity=(value){
+			Njpg.style.opacity=value;
+		}
+		function fadeOut(){
+			for(i=0;i<=1;i+0.01){
+			setTimeout("setOpacity("+1-i)+")",i*duration);}
+			setTimeout("fade In()",(duration+hidtime));
+			}
+		function fadeIn(){
+			for(i=0;i<=1;i+=0.01){
+			setTimeout(setOpacity("+i+")",i*duration);
+			}
+			setTimeout("fadeOut()",(duration+showtime));
+		}	
+	 </script>
+	 
+	 
+</body>
+</html>
